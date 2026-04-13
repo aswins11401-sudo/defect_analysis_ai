@@ -42,8 +42,8 @@ necessary details for the below given questions in bullet points (max 3 points f
 9.Calculate the probability that the structure has similar defects in other places 
 10.What is the probability of damages caused by the defects detected'''
 
-model = genai.GenerativeModel('gemini-2.5-flash-lite')
-def generate_result(prompt,image):
+model = genai.GenerativeModel('models/gemini-2.5-flash-lite')
+def generate_result(prompt,img):
     result = model.generate_content(f'''Using the given{prompt} and given image {img}
                                     analyze the image and give the results as per the prompt''')
     return result.text
